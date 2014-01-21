@@ -46,15 +46,33 @@
     NSDictionary *tempDict = [NSString loadMorseDict];
     
     tempArray = [NSString arrayFromNoSpaceString:sting];
+    
+    
+    
     for (int i = 0; i < [tempArray count]; i++) {
         
         NSString *tempKey = [tempArray objectAtIndex:i];
         
-        tempSymbol = [tempDict objectForKey:tempKey];
-        [holderArray addObject:tempSymbol];
+        if ([tempDict objectForKey:tempKey] == nil) {
+            
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Shoot!"
+                                                           message:@"Message cannot include symbols."
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Okay"
+                                                 otherButtonTitles: nil];
+            [alert show];
+            [holderArray removeAllObjects];
+            break;
+            
+        } else {
+            tempSymbol = [tempDict objectForKey:tempKey];
+            [holderArray addObject:tempSymbol];
+        }
     }
     
     NSLog(@"%@", holderArray);
 }
+
+
 
 @end

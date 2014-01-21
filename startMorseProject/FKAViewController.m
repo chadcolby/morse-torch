@@ -36,13 +36,17 @@
    
     NSString *noSpaces = [[NSString alloc]init];
     
-    
+    if (self.textEntered.text.length == 0) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Shoot!" message:@"Please enter a message to send." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alert show];
+    } else {
     
     _enteredMessage = self.textEntered.text;
     
     noSpaces = [NSString enteredStringWithOutSpaces:self.enteredMessage];
 
     [NSString morseCodeFromArray:noSpaces];
+    }
     
     [self.textEntered resignFirstResponder];
 }
