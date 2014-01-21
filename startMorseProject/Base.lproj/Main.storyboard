@@ -31,9 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Message" id="aVV-rh-CfB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Kfw-yZ-PgY">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="Kfw-yZ-PgY">
                             <connections>
-                                <action selector="doneButtonPressed:" destination="vXZ-lx-hvc" id="9mo-pZ-6kk"/>
+                                <action selector="sendButtonPressed:" destination="vXZ-lx-hvc" id="x4v-0X-4pH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -22,7 +22,7 @@
 {
     NSString *newString = [[NSString alloc]init];
     newString = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
+    newString = [newString uppercaseString];
     return newString;
 }
 
@@ -38,32 +38,23 @@
     return [NSArray arrayWithArray:tempArray];
 }
 
++ (void)morseCodeFromArray:(NSString *)sting
+{
+    NSArray *tempArray = [[NSMutableArray alloc]init];
+    NSMutableArray *holderArray = [[NSMutableArray alloc]init];
+    NSString *tempSymbol = [[NSString alloc]init];
+    NSDictionary *tempDict = [NSString loadMorseDict];
+    
+    tempArray = [NSString arrayFromNoSpaceString:sting];
+    for (int i = 0; i < [tempArray count]; i++) {
+        
+        NSString *tempKey = [tempArray objectAtIndex:i];
+        
+        tempSymbol = [tempDict objectForKey:tempKey];
+        [holderArray addObject:tempSymbol];
+    }
+    
+    NSLog(@"%@", holderArray);
+}
 
-//- (NSArray *)symbolsForString
-//{
-//    NSMutableArray *tempArray = [NSMutableArray new];
-//    NSString *noSpaces = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
-//    
-//    
-//    for (int i = 0; i < noSpaces.length ; i++) {
-//    
-//        [tempArray addObject:[self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]]];
-//    }
-//
-//    return [NSArray arrayWithArray:tempArray];
-//}
-//
-//- (NSString *)symbolForLetter: (NSString *)letter
-//{
-//    if ([letter rangeOfString:@" "].length == NSNotFound) {
-//        letter = [letter uppercaseString];
-//        return letter;
-//    } else {
-//        return @"no white space, please";
-//    }
-//    letter = [letter uppercaseString];
-//    letter = [letter stringByReplacingOccurrencesOfString:@" " withString:@""];
-//    
-//    return letter;
-//}
 @end

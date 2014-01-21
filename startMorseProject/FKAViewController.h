@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textEntered;
 
-- (IBAction)doneButtonPressed:(id)sender;
+- (IBAction)sendButtonPressed:(id)sender;
 
 
 @end

@@ -85,10 +85,10 @@
 		8DB91D3E188DB07C00854B4A = {
 			isa = PBXGroup;
 			children = (
-				8DB91D50188DB07C00854B4A /* startMorseProject */,
 				8DB91D6F188DB07C00854B4A /* startMorseProjectTests */,
 				8DB91D49188DB07C00854B4A /* Frameworks */,
 				8DB91D48188DB07C00854B4A /* Products */,
+				8DB91D50188DB07C00854B4A /* startMorseProject */,
 			);
 			sourceTree = "<group>";
 		};
@@ -467,6 +467,7 @@
 				8DB91D7B188DB07C00854B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DB91D7C188DB07C00854B4A /* Build configuration list for PBXNativeTarget "startMorseProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +476,7 @@
 				8DB91D7E188DB07C00854B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

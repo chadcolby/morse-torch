@@ -10,10 +10,9 @@
 
 @interface NSString (MorseCode)
 
-//- (NSArray *)symbolsForString;
-
 + (NSDictionary *)loadMorseDict;
 + (NSString *)enteredStringWithOutSpaces:(NSString *)string;
 + (NSArray *)arrayFromNoSpaceString:(NSString *) string;
++ (void)morseCodeFromArray:(NSString *)sting;
 
 @end

@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.morseCodeDict = [NSString loadMorseDict];
+
     self.enteredMessage = [[NSString alloc]init];
     
     
@@ -32,34 +32,18 @@
 
 #pragma mark - IBActions
 
-- (IBAction)doneButtonPressed:(id)sender {
+- (IBAction)sendButtonPressed:(id)sender {
    
     NSString *noSpaces = [[NSString alloc]init];
-    NSArray *tempArray = [[NSMutableArray alloc]init];
-    NSMutableArray *holderArray = [[NSMutableArray alloc]init];
     
-    self.enteredMessage = self.textEntered.text;
-   
-    NSLog(@"%@", self.enteredMessage);
     
+    
+    _enteredMessage = self.textEntered.text;
     
     noSpaces = [NSString enteredStringWithOutSpaces:self.enteredMessage];
-    noSpaces = [noSpaces uppercaseString];
+
+    [NSString morseCodeFromArray:noSpaces];
     
-    tempArray = [NSString arrayFromNoSpaceString:noSpaces];
-    NSLog(@"%@", tempArray);
-    NSString *tempSymbol = [[NSString alloc]init];
-    
-    for (int i = 1; i < [tempArray count]; i++) {
-       
-        NSString *tempKey = [tempArray objectAtIndex:i];
-        
-        tempSymbol = [self.morseCodeDict objectForKey:tempKey];
-       
-        [holderArray addObject:tempSymbol];
-    }
-    
-    NSLog(@"%@", holderArray);
     [self.textEntered resignFirstResponder];
 }
 
