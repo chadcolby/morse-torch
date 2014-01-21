@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jOD-BF-bQx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - New Message-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="New Message" id="vXZ-lx-hvc" customClass="FKAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tsb-Pi-HKQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hMZ-0Y-VBC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Messege To Send" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Qy-EW-3TJ">
+                                <rect key="frame" x="20" y="148" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Qy-EW-3TJ" secondAttribute="trailing" constant="20" symbolic="YES" id="Uba-bY-nPb"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="top" secondItem="tsb-Pi-HKQ" secondAttribute="bottom" constant="84" id="dTB-44-4Q7"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="qQb-Xj-Uv1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Message" id="aVV-rh-CfB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Kfw-yZ-PgY">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="vXZ-lx-hvc" id="9mo-pZ-6kk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textEntered" destination="4Qy-EW-3TJ" id="9ke-59-dv7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="94"/>
+        </scene>
+        <!--View Controller - Morse Torch-->
+        <scene sceneID="fuy-Zn-fpS">
+            <objects>
+                <viewController id="ocJ-s2-VUc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wu7-qD-lY1"/>
+                        <viewControllerLayoutGuide type="bottom" id="wxK-JX-6OE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bDp-U5-Ega">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfM-C3-Wz3">
+                                <rect key="frame" x="105" y="246" width="111" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="lTO-ru-bAW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
+                                <state key="normal" title="Press"/>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="qyA-UB-RUS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Send Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgp-JI-E9V">
+                                <rect key="frame" x="20" y="295" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="centerY" secondItem="bDp-U5-Ega" secondAttribute="centerY" id="Abm-X9-CfP"/>
+                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="centerX" secondItem="bDp-U5-Ega" secondAttribute="centerX" id="JNs-Fb-991"/>
+                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="top" secondItem="wu7-qD-lY1" secondAttribute="bottom" constant="182" id="zbB-Te-f2Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Morse Torch" id="d07-8j-hm4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8I-oS-neK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="94"/>
+        </scene>
+        <!--Navigation Controller - New Message-->
+        <scene sceneID="wqg-QQ-U8n">
+            <objects>
+                <navigationController title="New Message" automaticallyAdjustsScrollViewInsets="NO" id="EEW-f2-1QK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="caC-Q7-3ce">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="nsS-ND-lhS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nog-BT-U16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1365" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oub-sb-EHm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jOD-BF-bQx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Mf-rR-hVi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ocJ-s2-VUc" kind="relationship" relationship="rootViewController" id="c7D-9k-1fW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Axx-2H-v8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="94"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="qyA-UB-RUS"/>
+    </inferredMetricsTieBreakers>
+</document>
