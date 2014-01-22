@@ -55,4 +55,9 @@
     usleep(self.timeInterval * 5);
 }
 
+- (void)pauseAfterSymbol
+{
+    usleep(_timeInterval);
+}
+
 @end

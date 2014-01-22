@@ -55,7 +55,7 @@
         
         if ([tempDict objectForKey:tempKey] == nil) {
             
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Shoot!"
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Crap!"
                                                            message:@"Message cannot include symbols."
                                                           delegate:self
                                                  cancelButtonTitle:@"Okay"

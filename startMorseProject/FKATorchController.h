@@ -16,6 +16,6 @@
 - (void)dashFlash;
 - (void)dotFlash;
 - (void)pauseAfterWord;
-
+- (void)pauseAfterSymbol;
 
 @end

@@ -44,33 +44,42 @@
     
     
     if (self.textEntered.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Shoot!" message:@"Please enter a message to send."
-                                                      delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Crap!"
+                                                       message:@"Please enter a message to send."
+                                                      delegate:self
+                                             cancelButtonTitle:@"Okay"
+                                             otherButtonTitles: nil];
         [alert show];
     } else {
     
     _enteredMessage = self.textEntered.text;
+        NSLog(@"They entered: %@", _enteredMessage);
     noSpaces = [NSString enteredStringWithOutSpaces:self.enteredMessage];
     self.codedArray = [NSString morseCodeFromArray:noSpaces];
     
         for (NSString *string in _codedArray) {
            
             for (int i = 0; i < string.length; i++) {
-                
+            
                 if ([string isEqualToString:@"."] ) {
                 
                     [_torchController dotFlash];
-                
+                    [_torchController pauseAfterSymbol];
+              
                 } else {
                 
                     [_torchController dashFlash];
+                    [_torchController pauseAfterSymbol];
+                    
+                        }
+                }
+            [_torchController pauseAfterWord];
         }
-        
-        }
-    }
-    [self.textEntered resignFirstResponder];
+       
+        [self.textEntered resignFirstResponder];
     
-}
+    }
+
 }
 
 
