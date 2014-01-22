@@ -64,15 +64,16 @@
                 if ([string isEqualToString:@"."] ) {
                 
                     [_torchController dotFlash];
-                    [_torchController pauseAfterSymbol];
+                    //[_torchController pauseAfterSymbol];
               
                 } else {
                 
                     [_torchController dashFlash];
-                    [_torchController pauseAfterSymbol];
+                    //[_torchController pauseAfterSymbol];
                     
                         }
-                }
+                [_torchController pauseAfterSymbol];
+            }
             [_torchController pauseAfterWord];
         }
        

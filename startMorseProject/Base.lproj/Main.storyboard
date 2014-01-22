@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-yO-7JL">
-                                <rect key="frame" x="20" y="186" width="280" height="67"/>
+                                <rect key="frame" x="20" y="186" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
                                 <state key="normal" title="Send">
@@ -33,6 +33,15 @@
                                 <connections>
                                     <action selector="sendButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uMf-xh-KYf"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-VY-QdK">
+                                <rect key="frame" x="20" y="234" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="1835" y="94"/>
         </scene>
-        <!--View Controller - Morse Torch-->
+        <!--View Controller - MorseTorch-->
         <scene sceneID="fuy-Zn-fpS">
             <objects>
                 <viewController id="ocJ-s2-VUc" sceneMemberID="viewController">
@@ -92,7 +101,7 @@
                             <constraint firstItem="LfM-C3-Wz3" firstAttribute="top" secondItem="wu7-qD-lY1" secondAttribute="bottom" constant="182" id="zbB-Te-f2Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Morse Torch" id="d07-8j-hm4"/>
+                    <navigationItem key="navigationItem" title="MorseTorch" id="d07-8j-hm4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8I-oS-neK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +150,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nsS-ND-lhS"/>
+        <segue reference="qyA-UB-RUS"/>
     </inferredMetricsTieBreakers>
 </document>
