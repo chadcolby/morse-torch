@@ -22,6 +22,7 @@
 		8DB91D74188DB07C00854B4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DB91D72188DB07C00854B4A /* InfoPlist.strings */; };
 		8DB91D76188DB07C00854B4A /* startMorseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB91D75188DB07C00854B4A /* startMorseProjectTests.m */; };
 		8DB91D81188DB0F600854B4A /* NSString+MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB91D80188DB0F600854B4A /* NSString+MorseCode.m */; };
+		8DF274AD188F31BF00FDD639 /* FKATorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF274AC188F31BF00FDD639 /* FKATorchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8DB91D75188DB07C00854B4A /* startMorseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = startMorseProjectTests.m; sourceTree = "<group>"; };
 		8DB91D7F188DB0F600854B4A /* NSString+MorseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MorseCode.h"; sourceTree = "<group>"; };
 		8DB91D80188DB0F600854B4A /* NSString+MorseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MorseCode.m"; sourceTree = "<group>"; };
+		8DF274AB188F31BF00FDD639 /* FKATorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKATorchController.h; sourceTree = "<group>"; };
+		8DF274AC188F31BF00FDD639 /* FKATorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKATorchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +88,11 @@
 		8DB91D3E188DB07C00854B4A = {
 			isa = PBXGroup;
 			children = (
+				8DB91D50188DB07C00854B4A /* startMorseProject */,
 				8DB91D6F188DB07C00854B4A /* startMorseProjectTests */,
 				8DB91D49188DB07C00854B4A /* Frameworks */,
 				8DB91D48188DB07C00854B4A /* Products */,
-				8DB91D50188DB07C00854B4A /* startMorseProject */,
+				8DB91D51188DB07C00854B4A /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,13 +121,14 @@
 			children = (
 				8DB91D59188DB07C00854B4A /* FKAAppDelegate.h */,
 				8DB91D5A188DB07C00854B4A /* FKAAppDelegate.m */,
-				8DB91D5C188DB07C00854B4A /* Main.storyboard */,
 				8DB91D5F188DB07C00854B4A /* FKAViewController.h */,
 				8DB91D60188DB07C00854B4A /* FKAViewController.m */,
+				8DB91D5C188DB07C00854B4A /* Main.storyboard */,
+				8DF274AB188F31BF00FDD639 /* FKATorchController.h */,
+				8DF274AC188F31BF00FDD639 /* FKATorchController.m */,
 				8DB91D7F188DB0F600854B4A /* NSString+MorseCode.h */,
 				8DB91D80188DB0F600854B4A /* NSString+MorseCode.m */,
 				8DB91D62188DB07C00854B4A /* Images.xcassets */,
-				8DB91D51188DB07C00854B4A /* Supporting Files */,
 			);
 			path = startMorseProject;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				8DB91D58188DB07C00854B4A /* startMorseProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = startMorseProject;
 			sourceTree = "<group>";
 		};
 		8DB91D6F188DB07C00854B4A /* startMorseProjectTests */ = {
@@ -258,6 +264,7 @@
 				8DB91D61188DB07C00854B4A /* FKAViewController.m in Sources */,
 				8DB91D57188DB07C00854B4A /* main.m in Sources */,
 				8DB91D5B188DB07C00854B4A /* FKAAppDelegate.m in Sources */,
+				8DF274AD188F31BF00FDD639 /* FKATorchController.m in Sources */,
 				8DB91D81188DB0F600854B4A /* NSString+MorseCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

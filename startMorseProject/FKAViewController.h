@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSDictionary *morseCodeDict;
 @property (strong, nonatomic) NSString *enteredMessage;
+@property (strong, nonatomic) NSArray *codedArray;
 
 @property (weak, nonatomic) IBOutlet UITextField *textEntered;
 

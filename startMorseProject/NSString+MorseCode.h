@@ -13,7 +13,7 @@
 + (NSDictionary *)loadMorseDict;
 + (NSString *)enteredStringWithOutSpaces:(NSString *)string;
 + (NSArray *)arrayFromNoSpaceString:(NSString *) string;
-+ (void)morseCodeFromArray:(NSString *)sting;
++ (NSArray *)morseCodeFromArray:(NSString *)sting;
 
 
 @end

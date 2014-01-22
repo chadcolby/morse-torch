@@ -8,8 +8,11 @@
 
 #import "FKAViewController.h"
 #import "NSString+MorseCode.h"
+#import "FKATorchController.h"
 
 @interface FKAViewController ()
+
+@property (strong, nonatomic) FKATorchController *torchController;
 
 @end
 
@@ -19,8 +22,10 @@
 {
     [super viewDidLoad];
 
-    self.enteredMessage = [[NSString alloc]init];
-    
+    self.codedArray = [[NSArray alloc] init];
+    self.enteredMessage = [[NSString alloc] init];
+    self.torchController = [[FKATorchController alloc] init];
+  
     
 }
 
@@ -34,23 +39,39 @@
 
 - (IBAction)sendButtonPressed:(id)sender {
    
-    NSString *noSpaces = [[NSString alloc]init];
+    NSString *noSpaces = [[NSString alloc] init];
+    //NSArray *codedArray = [[NSArray alloc] init];
+    
     
     if (self.textEntered.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Shoot!" message:@"Please enter a message to send." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Shoot!" message:@"Please enter a message to send."
+                                                      delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
         [alert show];
     } else {
     
     _enteredMessage = self.textEntered.text;
-    
     noSpaces = [NSString enteredStringWithOutSpaces:self.enteredMessage];
-
-    [NSString morseCodeFromArray:noSpaces];
-    }
+    self.codedArray = [NSString morseCodeFromArray:noSpaces];
     
+        for (NSString *string in _codedArray) {
+           
+            for (int i = 0; i < string.length; i++) {
+                
+                if ([string isEqualToString:@"."] ) {
+                
+                    [_torchController dotFlash];
+                
+                } else {
+                
+                    [_torchController dashFlash];
+        }
+        
+        }
+    }
     [self.textEntered resignFirstResponder];
+    
 }
-
+}
 
 
 @end

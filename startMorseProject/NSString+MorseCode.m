@@ -12,7 +12,7 @@
 
 + (NSDictionary *)loadMorseDict
 {
-    NSDictionary *morseCodeDict =  [NSDictionary dictionaryWithObjectsAndKeys:@".-", @"A", @"-...", @"B", @"-.-.", @"C", @"-..", @"D", @".", @"E", @"..-.", @"F", @"--.", @"G", @"....", @"H", @"..", @"I", @".---", @"J", @"-.-", @"K", @".-..", @"L", @"--", @"M", @"-.", @"N", @"---", @"O", @".--.", @"P", @"--.-", @"Q", @".-.", @"R", @"...",@"S", @"-", @"T", @"..-", @"U", @"...-", @"V", @".--", @"W", @"-..-", @"X", @"-.--", @"Y", @"--..", @"Z",nil];
+    NSDictionary *morseCodeDict =  [NSDictionary dictionaryWithObjectsAndKeys:@".-", @"A", @"-...", @"B", @"-.-.", @"C", @"-..", @"D", @".", @"E", @"..-.", @"F", @"--.", @"G", @"....", @"H", @"..", @"I", @".---", @"J", @"-.-", @"K", @".-..", @"L", @"--", @"M", @"-.", @"N", @"---", @"O", @".--.", @"P", @"--.-", @"Q", @".-.", @"R", @"...",@"S", @"-", @"T", @"..-", @"U", @"...-", @"V", @".--", @"W", @"-..-", @"X", @"-.--", @"Y", @"--..", @"Z", @".----", @"1", @"..---", @"2", @"...--", @"3", @"....-", @"4", @".....", @"5", @"-....", @"6", @"--...", @"7", @"---..", @"8", @"----.", @"9", @"-----", @"0", nil];
     
     return morseCodeDict;
 }
@@ -38,7 +38,7 @@
     return [NSArray arrayWithArray:tempArray];
 }
 
-+ (void)morseCodeFromArray:(NSString *)sting
++ (NSArray *)morseCodeFromArray:(NSString *)sting
 {
     NSArray *tempArray = [[NSMutableArray alloc]init];
     NSMutableArray *holderArray = [[NSMutableArray alloc]init];
@@ -71,6 +71,7 @@
     }
     
     NSLog(@"%@", holderArray);
+    return holderArray;
 }
 
 
