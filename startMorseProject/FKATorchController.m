@@ -51,7 +51,6 @@
 
 - (void)pauseAfterWord
 {
-    //AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     usleep(self.timeInterval * 5);
 }
 

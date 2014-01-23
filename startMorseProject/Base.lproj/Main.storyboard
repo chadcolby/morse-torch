@@ -42,6 +42,9 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HTF-gD-tow"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -62,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1835" y="94"/>
         </scene>
-        <!--View Controller - MorseTorch-->
+        <!--First Page View Controller - MorseTorch-->
         <scene sceneID="fuy-Zn-fpS">
             <objects>
-                <viewController id="ocJ-s2-VUc" sceneMemberID="viewController">
+                <viewController id="ocJ-s2-VUc" customClass="FKAFirstPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wu7-qD-lY1"/>
                         <viewControllerLayoutGuide type="bottom" id="wxK-JX-6OE"/>

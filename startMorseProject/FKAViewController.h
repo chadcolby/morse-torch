@@ -13,10 +13,11 @@
 @property (strong, nonatomic) NSDictionary *morseCodeDict;
 @property (strong, nonatomic) NSString *enteredMessage;
 @property (strong, nonatomic) NSArray *codedArray;
+@property (strong, nonatomic) NSOperationQueue *sendCodeQueue;
 
 @property (weak, nonatomic) IBOutlet UITextField *textEntered;
 
 - (IBAction)sendButtonPressed:(id)sender;
-
+- (IBAction)cancelButtonPressed:(id)sender;
 
 @end

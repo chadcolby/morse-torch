@@ -22,10 +22,18 @@
 {
     [super viewDidLoad];
 
-    self.codedArray = [[NSArray alloc] init];
-    self.enteredMessage = [[NSString alloc] init];
-    self.torchController = [[FKATorchController alloc] init];
-  
+    _codedArray = [[NSArray alloc] init];
+    _enteredMessage = [[NSString alloc] init];
+    _torchController = [[FKATorchController alloc] init];
+    _sendCodeQueue =[NSOperationQueue new];
+    [_sendCodeQueue setMaxConcurrentOperationCount:1];
+    [_sendCodeQueue setName:@"com.bytemeetsworld.sendcodequeue"];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
 }
 
@@ -39,10 +47,6 @@
 
 - (IBAction)sendButtonPressed:(id)sender {
    
-    NSString *noSpaces = [[NSString alloc] init];
-    //NSArray *codedArray = [[NSArray alloc] init];
-    
-    
     if (self.textEntered.text.length == 0) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Crap!"
                                                        message:@"Please enter a message to send."
@@ -50,38 +54,63 @@
                                              cancelButtonTitle:@"Okay"
                                              otherButtonTitles: nil];
         [alert show];
+        
     } else {
-    
-    _enteredMessage = self.textEntered.text;
-        NSLog(@"They entered: %@", _enteredMessage);
-    noSpaces = [NSString enteredStringWithOutSpaces:self.enteredMessage];
-    self.codedArray = [NSString morseCodeFromArray:noSpaces];
-    
-        for (NSString *string in _codedArray) {
-           
-            for (int i = 0; i < string.length; i++) {
-            
-                if ([string isEqualToString:@"."] ) {
-                
-                    [_torchController dotFlash];
-                    //[_torchController pauseAfterSymbol];
-              
-                } else {
-                
-                    [_torchController dashFlash];
-                    //[_torchController pauseAfterSymbol];
-                    
-                        }
-                [_torchController pauseAfterSymbol];
-            }
-            [_torchController pauseAfterWord];
-        }
-       
+        
+        [self sendCodeBlock:_textEntered.text];
+      
         [self.textEntered resignFirstResponder];
     
     }
 
 }
 
+- (IBAction)cancelButtonPressed:(id)sender{
+    
+    NSLog(@"Cancel pushed.");
+    //[_codeFromLetters cancel];
+    [_sendCodeQueue cancelAllOperations];
+}
+
+
+#pragma mark - NSOperationQueue Methods
+
+- (void)sendCodeBlock:(NSString *)string
+{
+    NSString *noSpaces = [[NSString alloc] init];
+    _enteredMessage = string;
+    
+    noSpaces = [NSString enteredStringWithOutSpaces:_enteredMessage];
+    _codedArray = [NSString morseCodeFromArray:noSpaces];
+    
+    for (NSString *string in _codedArray) {
+        
+        for (int i = 0; i < string.length; i++) {
+            
+            NSString *tempSymbol = [string substringWithRange:NSMakeRange(i, 1)];
+        
+           
+                
+                if ([tempSymbol isEqualToString:@"."] ) {
+                    
+                    [_sendCodeQueue addOperationWithBlock:^{
+                        [_torchController dotFlash];
+                        [_torchController pauseAfterSymbol];
+                    }];
+                } else if ([tempSymbol isEqualToString:@"-"]) {
+                    [_sendCodeQueue addOperationWithBlock:^{
+                        [_torchController dashFlash];
+                        [_torchController pauseAfterSymbol];
+                    }];
+                } else {
+
+                  }
+
+                }
+            [_sendCodeQueue addOperationWithBlock:^{
+            [_torchController pauseAfterWord];
+        }];
+            }
+    }
 
 @end
