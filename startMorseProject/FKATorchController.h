@@ -17,5 +17,6 @@
 - (void)dotFlash;
 - (void)pauseAfterWord;
 - (void)pauseAfterSymbol;
-
+- (void)startHUD:(NSString *)string;
+- (void)endHUD;
 @end

@@ -22,10 +22,16 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="reload" destination="x5A-6p-PRh" eventType="editingDidEnd" id="ipR-rf-Dcp"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-yO-7JL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-yO-7JL">
                                 <rect key="frame" x="20" y="186" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xUd-vb-dln"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
                                 <state key="normal" title="Send">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,9 +40,12 @@
                                     <action selector="sendButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uMf-xh-KYf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-VY-QdK">
-                                <rect key="frame" x="20" y="234" width="280" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-VY-QdK">
+                                <rect key="frame" x="20" y="351" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Je-BO-Gld"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,9 +58,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4Qy-EW-3TJ" secondAttribute="trailing" constant="20" symbolic="YES" id="Uba-bY-nPb"/>
-                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="top" secondItem="tsb-Pi-HKQ" secondAttribute="bottom" constant="84" id="dTB-44-4Q7"/>
-                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="qQb-Xj-Uv1"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="top" secondItem="tsb-Pi-HKQ" secondAttribute="bottom" constant="84" id="VfP-mf-01o"/>
+                            <constraint firstItem="m3V-VY-QdK" firstAttribute="leading" secondItem="ZvM-yO-7JL" secondAttribute="leading" id="Vvz-Ue-OU7"/>
+                            <constraint firstAttribute="trailing" secondItem="4Qy-EW-3TJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ckn-mF-nZR"/>
+                            <constraint firstItem="ZvM-yO-7JL" firstAttribute="leading" secondItem="4Qy-EW-3TJ" secondAttribute="leading" id="e6r-US-FWx"/>
+                            <constraint firstItem="m3V-VY-QdK" firstAttribute="trailing" secondItem="ZvM-yO-7JL" secondAttribute="trailing" id="kBg-Xb-sVR"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="oaa-Sh-eiT"/>
+                            <constraint firstItem="hMZ-0Y-VBC" firstAttribute="top" secondItem="m3V-VY-QdK" secondAttribute="bottom" constant="177" id="qef-u4-CPE"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="trailing" secondItem="ZvM-yO-7JL" secondAttribute="trailing" id="sqC-BG-Khm"/>
+                            <constraint firstItem="ZvM-yO-7JL" firstAttribute="top" secondItem="4Qy-EW-3TJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xY5-kM-XAJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Message" id="aVV-rh-CfB">

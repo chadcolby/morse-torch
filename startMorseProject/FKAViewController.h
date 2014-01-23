@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProgressHUD.h"
+
 
 @interface FKAViewController : UIViewController
 

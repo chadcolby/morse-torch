@@ -9,6 +9,8 @@
 #import "FKAViewController.h"
 #import "NSString+MorseCode.h"
 #import "FKATorchController.h"
+#import "ProgressHUD.h"
+
 
 @interface FKAViewController ()
 
@@ -28,7 +30,7 @@
     _sendCodeQueue =[NSOperationQueue new];
     [_sendCodeQueue setMaxConcurrentOperationCount:1];
     [_sendCodeQueue setName:@"com.bytemeetsworld.sendcodequeue"];
-    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -58,8 +60,8 @@
     } else {
         
         [self sendCodeBlock:_textEntered.text];
-      
         [self.textEntered resignFirstResponder];
+
     
     }
 
@@ -70,6 +72,8 @@
     NSLog(@"Cancel pushed.");
     //[_codeFromLetters cancel];
     [_sendCodeQueue cancelAllOperations];
+    [_torchController endHUD];
+    [self.textEntered resignFirstResponder];
 }
 
 
@@ -77,22 +81,23 @@
 
 - (void)sendCodeBlock:(NSString *)string
 {
+
     NSString *noSpaces = [[NSString alloc] init];
-    _enteredMessage = string;
+    //_enteredMessage = string;
     
-    noSpaces = [NSString enteredStringWithOutSpaces:_enteredMessage];
+    noSpaces = [NSString enteredStringWithOutSpaces: string];
+    
     _codedArray = [NSString morseCodeFromArray:noSpaces];
     
     for (NSString *string in _codedArray) {
+    
         
         for (int i = 0; i < string.length; i++) {
             
             NSString *tempSymbol = [string substringWithRange:NSMakeRange(i, 1)];
-        
+            [_torchController startHUD:noSpaces];
            
-                
                 if ([tempSymbol isEqualToString:@"."] ) {
-                    
                     [_sendCodeQueue addOperationWithBlock:^{
                         [_torchController dotFlash];
                         [_torchController pauseAfterSymbol];
@@ -104,13 +109,23 @@
                     }];
                 } else {
 
-                  }
+                        }
+        }
 
-                }
             [_sendCodeQueue addOperationWithBlock:^{
             [_torchController pauseAfterWord];
         }];
-            }
+       }
     }
+
+#pragma mark - Helper Methods
+
+- (NSArray *)arrayFromString:(NSString *)string
+{
+    NSArray *holderArray = [[NSArray alloc] init];
+
+    
+    return holderArray;
+}
 
 @end

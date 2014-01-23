@@ -8,6 +8,7 @@
 
 #import "FKATorchController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "ProgressHUD.h"
 
 @implementation FKATorchController
 
@@ -59,4 +60,13 @@
     usleep(_timeInterval);
 }
 
+- (void)startHUD:(NSString *)string
+{
+    [ProgressHUD show: string];
+}
+
+- (void)endHUD
+{
+    [ProgressHUD dismiss];
+}
 @end
