@@ -19,6 +19,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Message" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4Qy-EW-3TJ">
                                 <rect key="frame" x="20" y="148" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vT0-sO-VPn"/>
+                                </constraints>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -30,7 +33,7 @@
                                 <rect key="frame" x="20" y="186" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="xUd-vb-dln"/>
+                                    <constraint firstAttribute="height" constant="40" id="zes-4x-Gmi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
                                 <state key="normal" title="Send">
@@ -41,11 +44,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-VY-QdK">
-                                <rect key="frame" x="20" y="351" width="280" height="40"/>
+                                <rect key="frame" x="20" y="234" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7Je-BO-Gld"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,15 +58,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="top" secondItem="tsb-Pi-HKQ" secondAttribute="bottom" constant="84" id="VfP-mf-01o"/>
-                            <constraint firstItem="m3V-VY-QdK" firstAttribute="leading" secondItem="ZvM-yO-7JL" secondAttribute="leading" id="Vvz-Ue-OU7"/>
-                            <constraint firstAttribute="trailing" secondItem="4Qy-EW-3TJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ckn-mF-nZR"/>
-                            <constraint firstItem="ZvM-yO-7JL" firstAttribute="leading" secondItem="4Qy-EW-3TJ" secondAttribute="leading" id="e6r-US-FWx"/>
-                            <constraint firstItem="m3V-VY-QdK" firstAttribute="trailing" secondItem="ZvM-yO-7JL" secondAttribute="trailing" id="kBg-Xb-sVR"/>
-                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="oaa-Sh-eiT"/>
-                            <constraint firstItem="hMZ-0Y-VBC" firstAttribute="top" secondItem="m3V-VY-QdK" secondAttribute="bottom" constant="177" id="qef-u4-CPE"/>
-                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="trailing" secondItem="ZvM-yO-7JL" secondAttribute="trailing" id="sqC-BG-Khm"/>
-                            <constraint firstItem="ZvM-yO-7JL" firstAttribute="top" secondItem="4Qy-EW-3TJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xY5-kM-XAJ"/>
+                            <constraint firstAttribute="trailing" secondItem="4Qy-EW-3TJ" secondAttribute="trailing" constant="20" symbolic="YES" id="5OB-Kb-F9C"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="leading" secondItem="ZvM-yO-7JL" secondAttribute="leading" id="Awp-WD-Dmj"/>
+                            <constraint firstItem="ZvM-yO-7JL" firstAttribute="trailing" secondItem="m3V-VY-QdK" secondAttribute="trailing" id="Jtu-sm-yfK"/>
+                            <constraint firstItem="ZvM-yO-7JL" firstAttribute="top" secondItem="4Qy-EW-3TJ" secondAttribute="bottom" constant="8" symbolic="YES" id="KQZ-a6-d9q"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="trailing" secondItem="ZvM-yO-7JL" secondAttribute="trailing" id="dc1-dX-NWO"/>
+                            <constraint firstItem="hMZ-0Y-VBC" firstAttribute="top" secondItem="m3V-VY-QdK" secondAttribute="bottom" constant="294" id="hOK-MI-OSD"/>
+                            <constraint firstItem="m3V-VY-QdK" firstAttribute="top" secondItem="ZvM-yO-7JL" secondAttribute="bottom" constant="8" symbolic="YES" id="i8E-v5-Swg"/>
+                            <constraint firstItem="m3V-VY-QdK" firstAttribute="leading" secondItem="ZvM-yO-7JL" secondAttribute="leading" id="qHP-kw-uQh"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="top" secondItem="tsb-Pi-HKQ" secondAttribute="bottom" constant="84" id="saB-tZ-niw"/>
+                            <constraint firstItem="4Qy-EW-3TJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="w4a-Jv-4OB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Message" id="aVV-rh-CfB">
@@ -78,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1835" y="94"/>
+            <point key="canvasLocation" x="1941" y="-341"/>
         </scene>
         <!--First Page View Controller - MorseTorch-->
         <scene sceneID="fuy-Zn-fpS">
@@ -93,20 +94,45 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfM-C3-Wz3">
-                                <rect key="frame" x="105" y="246" width="111" height="77"/>
+                                <rect key="frame" x="105" y="98" width="111" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="111" id="lTO-ru-bAW"/>
+                                    <constraint firstAttribute="height" constant="50" id="0bc-rp-QeI"/>
+                                    <constraint firstAttribute="width" constant="111" id="e27-9w-Fr4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
                                 <state key="normal" title="Press"/>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="qyA-UB-RUS"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="G9Q-Bs-33L"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Enter New Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgp-JI-E9V">
-                                <rect key="frame" x="20" y="295" width="280" height="36"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Enter New Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgp-JI-E9V">
+                                <rect key="frame" x="20" y="156" width="280" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="MLP-DZ-dRi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-nb-JCj">
+                                <rect key="frame" x="105" y="289" width="111" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
+                                <state key="normal" title="Press">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sf0-Q1-xox" kind="push" id="YWQ-6p-aa3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Receive New Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-nb-abC">
+                                <rect key="frame" x="20" y="347" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="flU-Nq-fsX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -114,9 +140,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="centerY" secondItem="bDp-U5-Ega" secondAttribute="centerY" id="Abm-X9-CfP"/>
-                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="centerX" secondItem="bDp-U5-Ega" secondAttribute="centerX" id="JNs-Fb-991"/>
-                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="top" secondItem="wu7-qD-lY1" secondAttribute="bottom" constant="182" id="zbB-Te-f2Z"/>
+                            <constraint firstItem="GUE-nb-JCj" firstAttribute="top" secondItem="Lgp-JI-E9V" secondAttribute="bottom" constant="97" id="2SU-Iw-7V8"/>
+                            <constraint firstItem="wxK-JX-6OE" firstAttribute="top" secondItem="F2h-nb-abC" secondAttribute="bottom" constant="185" id="5Vh-oI-Aka"/>
+                            <constraint firstItem="F2h-nb-abC" firstAttribute="leading" secondItem="Lgp-JI-E9V" secondAttribute="leading" id="8Cq-je-eWT"/>
+                            <constraint firstItem="Lgp-JI-E9V" firstAttribute="trailing" secondItem="F2h-nb-abC" secondAttribute="trailing" id="Bzf-F0-EZi"/>
+                            <constraint firstAttribute="trailing" secondItem="Lgp-JI-E9V" secondAttribute="trailing" constant="20" symbolic="YES" id="EZa-Xn-Rlw"/>
+                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="leading" secondItem="GUE-nb-JCj" secondAttribute="leading" id="N3d-0y-2EO"/>
+                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="top" secondItem="wu7-qD-lY1" secondAttribute="bottom" constant="34" id="Nph-Vg-VxD"/>
+                            <constraint firstItem="LfM-C3-Wz3" firstAttribute="trailing" secondItem="GUE-nb-JCj" secondAttribute="trailing" id="Qqi-XH-Oa7"/>
+                            <constraint firstItem="Lgp-JI-E9V" firstAttribute="leading" secondItem="bDp-U5-Ega" secondAttribute="leading" constant="20" symbolic="YES" id="dLp-G4-tkY"/>
+                            <constraint firstItem="Lgp-JI-E9V" firstAttribute="centerX" secondItem="LfM-C3-Wz3" secondAttribute="centerX" id="hVo-cL-OWt"/>
+                            <constraint firstItem="F2h-nb-abC" firstAttribute="top" secondItem="GUE-nb-JCj" secondAttribute="bottom" constant="8" symbolic="YES" id="hrV-YU-2PZ"/>
+                            <constraint firstItem="Lgp-JI-E9V" firstAttribute="top" secondItem="LfM-C3-Wz3" secondAttribute="bottom" constant="8" symbolic="YES" id="wsX-2w-iyn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MorseTorch" id="d07-8j-hm4"/>
@@ -125,23 +160,61 @@
             </objects>
             <point key="canvasLocation" x="893" y="94"/>
         </scene>
-        <!--Navigation Controller - New Message-->
-        <scene sceneID="wqg-QQ-U8n">
+        <!--Receive Message View Controller-->
+        <scene sceneID="SOJ-iH-3wA">
             <objects>
-                <navigationController title="New Message" automaticallyAdjustsScrollViewInsets="NO" id="EEW-f2-1QK" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="caC-Q7-3ce">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="nsS-ND-lhS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nog-BT-U16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="sf0-Q1-xox" customClass="FKAReceiveMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yOM-Cz-yhL"/>
+                        <viewControllerLayoutGuide type="bottom" id="c3x-lc-BiB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nt4-iI-BdO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUM-Do-2kY">
+                                <rect key="frame" x="30" y="165" width="260" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="25"/>
+                                <state key="normal" title="Start Receiving">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="receivedButtonPressed:" destination="sf0-Q1-xox" eventType="touchUpInside" id="gHe-fT-gbc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8K-Ui-0q7">
+                                <rect key="frame" x="30" y="269" width="260" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="OaW-oG-l7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="25"/>
+                                <state key="normal" title="Stop Receiving">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="receivedButtonPressed:" destination="sf0-Q1-xox" eventType="touchUpInside" id="KZj-bj-WqE"/>
+                                    <action selector="stopButtonPressed:" destination="sf0-Q1-xox" eventType="touchUpInside" id="Chm-PU-hdz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qUM-Do-2kY" firstAttribute="trailing" secondItem="K8K-Ui-0q7" secondAttribute="trailing" id="1EB-iZ-oeK"/>
+                            <constraint firstItem="K8K-Ui-0q7" firstAttribute="centerX" secondItem="nt4-iI-BdO" secondAttribute="centerX" id="E7P-34-ncl"/>
+                            <constraint firstItem="K8K-Ui-0q7" firstAttribute="leading" secondItem="qUM-Do-2kY" secondAttribute="leading" id="GHv-OJ-BqS"/>
+                            <constraint firstItem="qUM-Do-2kY" firstAttribute="leading" secondItem="nt4-iI-BdO" secondAttribute="leading" constant="30" id="Ppn-ZG-oHF"/>
+                            <constraint firstItem="qUM-Do-2kY" firstAttribute="top" secondItem="yOM-Cz-yhL" secondAttribute="bottom" constant="101" id="ek2-mJ-Fmk"/>
+                            <constraint firstItem="K8K-Ui-0q7" firstAttribute="top" secondItem="qUM-Do-2kY" secondAttribute="bottom" constant="67" id="k0O-sA-GYe"/>
+                            <constraint firstItem="c3x-lc-BiB" firstAttribute="top" secondItem="K8K-Ui-0q7" secondAttribute="bottom" constant="270" id="mkY-y3-2Tr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ls5-gC-hhZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vX-hE-kme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="94"/>
+            <point key="canvasLocation" x="1941" y="416"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oub-sb-EHm">
@@ -161,6 +234,44 @@
             </objects>
             <point key="canvasLocation" x="406" y="94"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XKJ-A5-6Ix">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Hk-2m-uYi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rRY-b7-Ibo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N7p-pk-Wm4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sf0-Q1-xox" kind="relationship" relationship="rootViewController" id="ZDW-pZ-Qh2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWd-su-Ff2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xlU-5f-k8h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZhW-Ir-odM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="51r-8N-yDI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e0H-qR-6OA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="oXI-cu-fmI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qc9-pm-ZKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="-341"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -168,6 +279,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qyA-UB-RUS"/>
+        <segue reference="G9Q-Bs-33L"/>
+        <segue reference="YWQ-6p-aa3"/>
     </inferredMetricsTieBreakers>
 </document>

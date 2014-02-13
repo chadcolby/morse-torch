@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *enteredMessage;
 @property (strong, nonatomic) NSArray *codedArray;
 @property (strong, nonatomic) NSOperationQueue *sendCodeQueue;
+@property (strong, nonatomic) NSMutableArray *lettersArrayForHUD;
 
 @property (weak, nonatomic) IBOutlet UITextField *textEntered;
 

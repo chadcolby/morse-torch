@@ -28,7 +28,7 @@
 {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
-    if ([device hasFlash] && [device hasFlash]) {
+    if ([device hasTorch] && [device hasFlash]) {
         [device lockForConfiguration:nil];
         [device setTorchMode:AVCaptureTorchModeOn];
         usleep(self.timeInterval * 3);
@@ -45,6 +45,7 @@
         [device lockForConfiguration:nil];
         [device setTorchMode:AVCaptureTorchModeOn];
         usleep(self.timeInterval);
+        
         [device setTorchMode:AVCaptureTorchModeOff];
         [device unlockForConfiguration];
     }
@@ -53,11 +54,13 @@
 - (void)pauseAfterWord
 {
     usleep(self.timeInterval * 5);
+
 }
 
 - (void)pauseAfterSymbol
 {
     usleep(_timeInterval);
+
 }
 
 - (void)startHUD:(NSString *)string

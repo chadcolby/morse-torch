@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFMagicEvents.h"
 
 @interface FKAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) CFMagicEvents *cfMagicEvents;
 
 @end
